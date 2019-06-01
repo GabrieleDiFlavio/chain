@@ -16,4 +16,4 @@ COPY ./  ./app
 
 WORKDIR ./app
 
-CMD [ "python3", "pidigit.py" ]
+CMD [ "python3", "pidigit_chain.py" ]
