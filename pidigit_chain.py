@@ -57,7 +57,7 @@ def computepi():
             d  = mul(d, k2 + 1)
             k += 1;
     if chain_lenght != 0:        
-        contents = urllib.request.urlopen("http://10.96.84.58:5000/"+"?N="+str(N)+"& lenght="+str(chain_lenght-1).read() 
+        contents = urllib.request.urlopen("http://10.96.84.58:5000/"+"?N="+str(N)+"& lenght="+str(chain_lenght-1)).read() 
         return(f.getvalue())            
     else:
         return(f.getvalue())    
