@@ -9,6 +9,8 @@ RUN pip3 install gmpy2 --user
 
 RUN pip3 install Flask 
 
+RUN pip3 install urllib.request
+
 COPY ./  ./app
 
 # Exposing Ports
