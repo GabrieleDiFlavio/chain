@@ -1,4 +1,5 @@
 import sys
+import urllib.request
 from io import StringIO
 from gmpy2 import xmpz,div,mul,add
 from flask import Flask
@@ -57,7 +58,7 @@ def computepi():
             d  = mul(d, k2 + 1)
             k += 1;
     if lenght != 0:        
-        contents = urllib.request.urlopen("http://10.96.84.58:5000/"+"?N="+str(N)+"& lenght="+str(lenght-1)).read() 
+        contents = urllib.request.urlopen("http://10.96.84.58:5000/"+"?N="+str(N)+"&lenght="+str(lenght-1)).read() 
     
     return(f.getvalue())                       
 
