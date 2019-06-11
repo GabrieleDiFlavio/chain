@@ -25,8 +25,10 @@ def computepi():
     f10 = xmpz(10)
     n10 = xmpz(-10)
     i = 0
+    URLserv=request.args.get('URLserv',type = str)
     N=request.args.get('N',default = 10, type = int)
     lenght=request.args.get('lenght',default = 1, type = int)
+    
     while True:
         # digit
         u = int(div(n1,d))
@@ -58,7 +60,7 @@ def computepi():
             d  = mul(d, k2 + 1)
             k += 1;
     if lenght != 0:        
-        contents = urllib.request.urlopen("http://10.96.84.58:5000/"+"?N="+str(N)+"&lenght="+str(lenght-1)).read() 
+        contents = urllib.request.urlopen(str(URLserv)+"?N="+str(N)+"&lenght="+str(lenght-1)).read() 
     
     return(f.getvalue())                       
 
